@@ -14,3 +14,67 @@
 2025-10-31 14:44:23 | INFO | __main__ | ============================================================
 2025-10-31 14:44:23 | INFO | __main__ | LIVE TRADING ENDED
 2025-10-31 14:44:23 | INFO | __main__ | ============================================================
+2025-10-31 15:00:42 | INFO | utils | Trade logger initialized. Log file: logs\trading_20251031.log
+2025-10-31 15:00:42 | INFO | __main__ | All components initialized successfully
+2025-10-31 15:00:42 | INFO | __main__ | ============================================================
+2025-10-31 15:00:42 | INFO | __main__ | STARTING LIVE TRADING: XAUUSD
+2025-10-31 15:00:42 | INFO | __main__ | ============================================================
+2025-10-31 15:00:53 | INFO | data_handler | MT5 initialized. Version: (500, 5370, '17 Oct 2025')
+2025-10-31 15:00:53 | INFO | data_handler | Terminal info: TerminalInfo(community_account=True, community_connection=False, connected=True, dlls_allowed=True, trade_allowed=True, tradeapi_disabled=False, email_enabled=False, ftp_enabled=False, notifications_enabled=False, mqid=True, build=5370, maxbars=100000, codepage=0, ping_last=266321, community_balance=0.0, retransmission=0.0, company='MetaQuotes Ltd.', name='MetaTrader 5', language='English', path='C:\\Program Files\\MetaTrader 5', data_path='C:\\Users\\admin\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075', commondata_path='C:\\Users\\admin\\AppData\\Roaming\\MetaQuotes\\Terminal\\Common')
+2025-10-31 15:00:53 | INFO | executor | Starting trading loop for XAUUSD on 15m
+2025-10-31 15:00:53 | INFO | executor | Check interval: 900s | Probability threshold: 0.6
+2025-10-31 15:00:53 | INFO | feature_engineering | Computing features...
+2025-10-31 15:00:53 | INFO | feature_engineering | Features computed: 39 features
+2025-10-31 15:00:53 | ERROR | executor | Error in trading loop: 'Close'
+2025-10-31 15:07:38 | INFO | __main__ | Live trading interrupted by user
+2025-10-31 15:07:38 | INFO | data_handler | MT5 connection closed
+2025-10-31 15:07:38 | INFO | __main__ | MT5 connection closed
+2025-10-31 15:07:38 | INFO | __main__ | ============================================================
+2025-10-31 15:07:38 | INFO | __main__ | LIVE TRADING ENDED
+2025-10-31 15:07:38 | INFO | __main__ | ============================================================
+2025-10-31 15:08:39 | INFO | utils | Trade logger initialized. Log file: logs\trading_20251031.log
+2025-10-31 15:08:39 | INFO | __main__ | All components initialized successfully
+2025-10-31 15:08:39 | INFO | __main__ | ============================================================
+2025-10-31 15:08:39 | INFO | __main__ | BACKTESTING XAUUSD
+2025-10-31 15:08:39 | INFO | __main__ | ============================================================
+2025-10-31 15:08:39 | WARNING | data_handler | File not found: forex_data\XAUUSD_15m.parquet
+2025-10-31 15:08:39 | ERROR | __main__ | No data found for XAUUSD
+2025-10-31 15:09:54 | INFO | utils | Trade logger initialized. Log file: logs\trading_20251031.log
+2025-10-31 15:09:54 | INFO | __main__ | All components initialized successfully
+2025-10-31 15:09:54 | INFO | __main__ | Downloading 365 days of data for XAUUSD
+2025-10-31 15:09:54 | INFO | data_handler | MT5 initialized. Version: (500, 5370, '17 Oct 2025')
+2025-10-31 15:09:54 | INFO | data_handler | Terminal info: TerminalInfo(community_account=True, community_connection=True, connected=True, dlls_allowed=True, trade_allowed=True, tradeapi_disabled=False, email_enabled=False, ftp_enabled=False, notifications_enabled=False, mqid=True, build=5370, maxbars=100000, codepage=0, ping_last=266321, community_balance=0.0, retransmission=3.0650283031892864, company='MetaQuotes Ltd.', name='MetaTrader 5', language='English', path='C:\\Program Files\\MetaTrader 5', data_path='C:\\Users\\admin\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075', commondata_path='C:\\Users\\admin\\AppData\\Roaming\\MetaQuotes\\Terminal\\Common')
+2025-10-31 15:09:54 | INFO | data_handler | Retrieved 23551 bars for XAUUSD 15m
+2025-10-31 15:12:36 | INFO | utils | Trade logger initialized. Log file: logs\trading_20251031.log
+2025-10-31 15:12:36 | INFO | __main__ | All components initialized successfully
+2025-10-31 15:12:36 | INFO | __main__ | Downloading 365 days of data for XAUUSD
+2025-10-31 15:12:41 | INFO | data_handler | MT5 initialized. Version: (500, 5370, '17 Oct 2025')
+2025-10-31 15:12:41 | INFO | data_handler | Terminal info: TerminalInfo(community_account=True, community_connection=False, connected=True, dlls_allowed=True, trade_allowed=True, tradeapi_disabled=False, email_enabled=False, ftp_enabled=False, notifications_enabled=False, mqid=True, build=5370, maxbars=100000, codepage=0, ping_last=266321, community_balance=0.0, retransmission=0.0, company='MetaQuotes Ltd.', name='MetaTrader 5', language='English', path='C:\\Program Files\\MetaTrader 5', data_path='C:\\Users\\admin\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075', commondata_path='C:\\Users\\admin\\AppData\\Roaming\\MetaQuotes\\Terminal\\Common')
+2025-10-31 15:12:41 | INFO | data_handler | Retrieved 23551 bars for XAUUSD 15m
+2025-10-31 15:12:42 | INFO | data_handler | Saved 23551 bars to forex_data\XAUUSD_15m.parquet
+2025-10-31 15:12:42 | INFO | data_handler | MT5 connection closed
+2025-10-31 15:12:42 | INFO | __main__ | Data download complete
+2025-10-31 15:13:58 | INFO | utils | Trade logger initialized. Log file: logs\trading_20251031.log
+2025-10-31 15:13:58 | INFO | __main__ | All components initialized successfully
+2025-10-31 15:13:58 | INFO | __main__ | ============================================================
+2025-10-31 15:13:58 | INFO | __main__ | TRAINING MODEL FOR XAUUSD
+2025-10-31 15:13:58 | INFO | __main__ | ============================================================
+2025-10-31 15:13:58 | INFO | data_handler | Loaded 23551 bars from forex_data\XAUUSD_15m.parquet
+2025-10-31 15:13:58 | INFO | __main__ | Loaded 23551 bars
+2025-10-31 15:13:58 | INFO | __main__ | Computing features...
+2025-10-31 15:13:58 | INFO | feature_engineering | Computing features...
+2025-10-31 15:14:05 | INFO | feature_engineering | Features computed: 39 features
+2025-10-31 15:14:05 | INFO | __main__ | Generating labels...
+2025-10-31 15:14:05 | INFO | label_generator | Generating classification labels for 23551 bars
+2025-10-31 15:14:51 | INFO | utils | Trade logger initialized. Log file: logs\trading_20251031.log
+2025-10-31 15:14:51 | INFO | __main__ | All components initialized successfully
+2025-10-31 15:14:51 | INFO | __main__ | ============================================================
+2025-10-31 15:14:51 | INFO | __main__ | TRAINING MODEL FOR XAUUSD
+2025-10-31 15:14:51 | INFO | __main__ | ============================================================
+2025-10-31 15:14:51 | INFO | data_handler | Loaded 23551 bars from forex_data\XAUUSD_15m.parquet
+2025-10-31 15:14:51 | INFO | __main__ | Loaded 23551 bars
+2025-10-31 15:14:51 | INFO | __main__ | Computing features...
+2025-10-31 15:14:51 | INFO | feature_engineering | Computing features...
+2025-10-31 15:14:57 | INFO | feature_engineering | Features computed: 39 features
+2025-10-31 15:14:57 | INFO | __main__ | Generating labels...
+2025-10-31 15:14:57 | INFO | label_generator | Generating classification labels for 23551 bars
