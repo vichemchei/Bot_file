@@ -1,0 +1,16 @@
+2025-10-31 14:42:06 | INFO | utils | Trade logger initialized. Log file: logs\trading_20251031.log
+2025-10-31 14:42:06 | INFO | __main__ | All components initialized successfully
+2025-10-31 14:42:06 | INFO | __main__ | ============================================================
+2025-10-31 14:42:06 | INFO | __main__ | STARTING LIVE TRADING: XAUUSD
+2025-10-31 14:42:06 | INFO | __main__ | ============================================================
+2025-10-31 14:42:18 | INFO | data_handler | MT5 initialized. Version: (500, 5370, '17 Oct 2025')
+2025-10-31 14:42:18 | INFO | data_handler | Terminal info: TerminalInfo(community_account=True, community_connection=False, connected=True, dlls_allowed=True, trade_allowed=True, tradeapi_disabled=False, email_enabled=False, ftp_enabled=False, notifications_enabled=False, mqid=True, build=5370, maxbars=100000, codepage=0, ping_last=266321, community_balance=0.0, retransmission=0.0, company='MetaQuotes Ltd.', name='MetaTrader 5', language='English', path='C:\\Program Files\\MetaTrader 5', data_path='C:\\Users\\admin\\AppData\\Roaming\\MetaQuotes\\Terminal\\D0E8209F77C8CF37AD8BF550E51FF075', commondata_path='C:\\Users\\admin\\AppData\\Roaming\\MetaQuotes\\Terminal\\Common')
+2025-10-31 14:42:18 | INFO | executor | Starting trading loop for XAUUSD on 15m
+2025-10-31 14:42:18 | INFO | executor | Check interval: 900s | Probability threshold: 0.6
+2025-10-31 14:42:18 | ERROR | executor | Error in trading loop: 'close'
+2025-10-31 14:44:23 | INFO | __main__ | Live trading interrupted by user
+2025-10-31 14:44:23 | INFO | data_handler | MT5 connection closed
+2025-10-31 14:44:23 | INFO | __main__ | MT5 connection closed
+2025-10-31 14:44:23 | INFO | __main__ | ============================================================
+2025-10-31 14:44:23 | INFO | __main__ | LIVE TRADING ENDED
+2025-10-31 14:44:23 | INFO | __main__ | ============================================================

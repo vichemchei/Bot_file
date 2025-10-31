@@ -1,0 +1,223 @@
+# ============================================================================
+# FOREX TRADING BOT CONFIGURATION
+# ============================================================================
+
+# MetaTrader 5 Settings
+mt5:
+  # Path to MT5 terminal executable (Windows)
+  path: "C:\\Program Files\\MetaTrader 5\\terminal64.exe"
+  
+  # Currency pairs to trade
+  symbols:
+    - EURUSD
+    - GBPUSD
+    - USDJPY
+    - AUDUSD
+    - USDCAD
+  
+  # Timeframe for analysis (1m, 5m, 15m, 30m, 1H, 4H, 1D)
+  timeframe: "15m"
+
+# Risk Management Settings
+risk:
+  # Starting account balance (USD)
+  initial_balance: 10000
+  
+  # Risk per trade as fraction of balance (0.01 = 1%)
+  risk_per_trade: 0.01
+  
+  # Maximum daily loss as fraction of balance (0.03 = 3%)
+  daily_loss_limit: 0.03
+  
+  # Maximum weekly loss as fraction of balance (0.10 = 10%)
+  weekly_loss_limit: 0.10
+  
+  # Maximum drawdown before stopping (0.20 = 20%)
+  max_drawdown_limit: 0.20
+  
+  # Maximum concurrent positions per symbol
+  max_positions_per_symbol: 2
+  
+  # Maximum total concurrent positions across all symbols
+  max_total_positions: 5
+  
+  # Number of consecutive losses before cooldown
+  cooldown_after_losses: 3
+  
+  # Hours to wait after loss streak
+  cooldown_hours: 2.0
+  
+  # Minimum ATR percentile to trade (volatility filter)
+  min_atr_percentile: 0.10
+
+# Trading Strategy Settings
+trading:
+  # Stop-loss multiplier (ATR-based)
+  sl_atr_mult: 1.0
+  
+  # Take-profit multiplier (ATR-based)
+  tp_atr_mult: 2.0
+  
+  # Minimum ML probability to take trade (0-1)
+  prob_threshold: 0.60
+  
+  # Seconds between trading loop checks (900 = 15 minutes)
+  check_interval: 900
+  
+  # Maximum bars to hold position before time exit
+  max_bars_in_trade: 48
+  
+  # Minimum conditions required for trade (out of 5)
+  min_conditions: 3
+
+# Machine Learning Model Settings
+model:
+  # Path to trained model file
+  model_path: "models/xgb_model.pkl"
+  
+  # Path to feature scaler
+  scaler_path: "models/xgb_model_scaler.pkl"
+  
+  # Path to feature names list
+  features_path: "models/xgb_model_features.pkl"
+  
+  # XGBoost hyperparameters (used if not optimizing)
+  xgb_params:
+    n_estimators: 400
+    learning_rate: 0.03
+    max_depth: 4
+    subsample: 0.8
+    colsample_bytree: 0.8
+    gamma: 0.1
+    reg_alpha: 0.1
+    reg_lambda: 1.0
+
+# Feature Engineering Settings
+features:
+  # EMA periods
+  ema_short: 50
+  ema_long: 200
+  
+  # RSI period
+  rsi_period: 14
+  
+  # Stochastic parameters
+  stoch_period: 14
+  stoch_smooth: 3
+  
+  # ATR period
+  atr_period: 14
+  
+  # FVG minimum gap (ATR multiplier)
+  fvg_atr_mult: 0.5
+  
+  # BOS lookback period
+  bos_lookback: 21
+  
+  # OBV delta lookback (bars)
+  obv_delta_bars: 48
+
+# Backtesting Settings
+backtest:
+  # Transaction costs
+  spread_pips: 2.0
+  commission_per_lot: 7.0
+  slippage_pips: 0.5
+  
+  # Pip value for 1 standard lot
+  pip_value: 10.0
+  
+  # Walk-forward settings
+  train_days: 365
+  test_days: 90
+
+# Monitoring & Alerts
+monitoring:
+  # Dashboard update interval (seconds)
+  dashboard_update_interval: 300
+  
+  # Feature drift check interval (seconds)
+  drift_check_interval: 3600
+  
+  # Drift detection p-value threshold
+  drift_threshold: 0.05
+  
+  # Enable email alerts
+  email_enabled: false
+  
+  # Enable Telegram alerts
+  telegram_enabled: false
+  
+  # Alert cooldown (minutes)
+  alert_cooldown_minutes: 60
+
+# Email Alert Configuration (optional)
+email:
+  smtp_server: "smtp.gmail.com"
+  port: 587
+  sender: "your_email@gmail.com"
+  password: "your_app_password"
+  recipients:
+    - "recipient1@example.com"
+    - "recipient2@example.com"
+
+# Telegram Alert Configuration (optional)
+telegram:
+  bot_token: "YOUR_BOT_TOKEN"
+  chat_id: "YOUR_CHAT_ID"
+
+# Data Storage Settings
+data:
+  # Directory for historical data
+  data_dir: "forex_data"
+  
+  # Directory for trained models
+  model_dir: "models"
+  
+  # Directory for backtest results
+  backtest_dir: "backtest_results"
+  
+  # Directory for logs
+  log_dir: "logs"
+
+# Logging Settings
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  
+  # Log format
+  format: "%(asctime)s | %(levelname)s | %(name)s | %(message)s"
+  
+  # Date format
+  date_format: "%Y-%m-%d %H:%M:%S"
+
+# Advanced Settings
+advanced:
+  # Use time-of-day filters
+  use_time_filters: true
+  
+  # Avoid trading during these UTC hours (high-impact news)
+  avoid_hours:
+    - 8  # European open
+    - 12  # US pre-market
+    - 14  # FOMC
+  
+  # Maximum correlation between open positions
+  max_correlation: 0.8
+  
+  # Rebalance position sizes daily
+  daily_rebalance: false
+  
+  # Use trailing stop
+  use_trailing_stop: false
+  
+  # Trailing stop distance (ATR multiplier)
+  trailing_stop_atr_mult: 1.5
+
+# ============================================================================
+# NOTES:
+# - All file paths use forward slashes (/) or escaped backslashes (\\)
+# - Fractions (0.01) represent percentages (1%)
+# - Time intervals are in seconds unless otherwise specified
+# - ATR multipliers determine stop/target distances
+# - Modify with caution - improper settings can lead to losses
+# ============================================================================
